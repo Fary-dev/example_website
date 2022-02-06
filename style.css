@@ -470,6 +470,10 @@
     }
     /* -- About section -- */
     
+    #about {
+        background-color: #b5bbc2;
+    }
+    
     #about .about {
         flex-direction: column-reverse;
         text-align: center;
@@ -509,7 +513,7 @@
         height: 100%;
         width: 100%;
         position: relative;
-        border: 10px solid #fff;
+        border: 10px solid #b5bbc2;
         z-index: 1;
     }
     
@@ -520,7 +524,7 @@
         top: 19px;
         height: 98%;
         width: 98%;
-        border: 7px solid var(--primaryColor);
+        border: 7px solid #000;
         z-index: -1;
     }
     /* -- Contact section -- */
@@ -548,7 +552,12 @@
         flex-direction: column;
         box-shadow: 0px 0px 18px #0000002c;
         transition: .3s ease box-shadow;
+        color: #000;
     }
+    /* #contact .contact-item .icon img {
+        min-height: 63.43px;
+        min-height: 100px;
+    } */
     
     #contact .contact-item:hover {
         box-shadow: 0px 0px 5px #0000002c;
@@ -705,7 +714,7 @@
             top: 34px;
             height: 98%;
             width: 98%;
-            border: 10px solid var(--primaryColor);
+            border: 10px solid #000;
         }
         #about .col-right {
             text-align: left;
@@ -728,9 +737,15 @@
             flex-direction: row;
             justify-content: space-evenly;
             margin: 0;
+            margin-top: 30px;
+        }
+        #contact .contact-items a {
+            width: 30%;
+            margin: 0;
+            flex-direction: row;
         }
         #contact .contact-item {
-            width: 30%;
+            width: 100%;
             margin: 0;
             flex-direction: row;
         }
@@ -740,6 +755,7 @@
         }
         #contact .contact-item .icon img {
             object-fit: contain;
+            min-width: 60px;
         }
         #contact .contact-item .contact-info {
             width: 100%;
