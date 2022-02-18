@@ -1,8 +1,12 @@
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400; 500; 600; 700&family=Poppins:wght@400; 500; 600; 700&family=Ubuntu:wght@400; 500; 700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 // // -------------- fonts ------------------
 // $font-family: sans-serif;
 // ---------------- Colors ---------------
-$primaryColor: rgb(238, 57, 51);
+$primaryColor: rgb(238,
+57,
+51);
 $bkColor: #141212;
 // ---------------------------------------
 * {
@@ -15,6 +19,15 @@ html {
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mitr', sans-serif;
 }
 
 a {
@@ -41,7 +54,7 @@ p {
 
 @mixin icons {
     color: #fff;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 @mixin section-title($size:3.5rem) {
@@ -57,7 +70,9 @@ p {
     }
 }
 
-@mixin cta ($size:2rem, $p1:10px, $p2:30px) {
+@mixin cta ($size:2rem,
+$p1:10px,
+$p2:30px) {
     display: inline-block;
     padding: $p1 $p2;
     color: #fff;
@@ -85,7 +100,7 @@ p {
     justify-content: center;
 }
 
-@mixin brand ($size:2rem) {
+@mixin brand ($size:2.5rem) {
     h1 {
         font-size: $size;
         text-transform: uppercase;
@@ -280,6 +295,7 @@ p {
                 @include cta;
             }
             h1 {
+                font-family: 'Montserrat', sans-serif;
                 display: block;
                 width: fit-content;
                 font-size: 4rem;
@@ -382,7 +398,7 @@ p {
                     width: 80px;
                     margin-bottom: 10px;
                     .serviceIcon {
-                        color: #fff;
+                        color: $primaryColor;
                         font-size: 50px;
                     }
                 }
@@ -420,6 +436,11 @@ p {
                     box-shadow: 0 0 5px $primaryColor;
                     position: relative;
                     background-image: linear-gradient(60deg, $primaryColor 50%, $primaryColor 100%);
+                    .icon {
+                        .serviceIcon {
+                            color: #fff;
+                        }
+                    }
                 }
                 h2 {
                     font-size: 2rem;
@@ -614,35 +635,49 @@ p {
                     padding: 20px;
                     text-align: center;
                     border-radius: 10px;
-                    padding: 30px;
+                    padding: 0;
                     margin: 30px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    box-shadow: 0px 0px 18px #dbd9d92c;
+                    box-shadow: 0px 0px 0px #dbd9d92c;
                     transition: .3s ease box-shadow;
+                    background-image: linear-gradient(60deg, #2b2929 50%, #2b2929 100%);
                     color: #fff;
+                    transition: .6s ease-in-out background-image;
                     &:hover {
-                        box-shadow: 0px 0px 5px $primaryColor;
-                        background-image: linear-gradient(60deg, rgba(238, 57, 51, .1) 50%, rgba(238, 57, 51, .1) 100%);
-                    }
-                    .icon {
-                        @include icons;
-                        width: 70px;
-                        margin: 0 auto;
-                        margin-bottom: 10px;
-                    }
-                    .contact-info {
-                        h1 {
-                            font-size: 2.5rem;
-                            font-weight: 500;
-                            margin-bottom: 5px;
+                        box-shadow: 0px 0px 0px $primaryColor;
+                        background-image: linear-gradient(60deg, $primaryColor 50%, $primaryColor 100%);
+                        .icon svg {
+                            fill: #fff;
                         }
-                        h2 {
-                            font-size: 1.3rem;
-                            font-weight: 500;
-                            line-height: 2rem
+                    }
+                    a {
+                        height: 100%;
+                        width: 100%;
+                        padding: auto;
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        svg {
+                            width: 35px;
+                            height: 35px;
+                            fill: $primaryColor;
+                        }
+                        .contact-info {
+                            h1 {
+                                font-size: 2.5rem;
+                                font-weight: 500;
+                                margin-bottom: 15px;
+                                text-transform: capitalize;
+                            }
+                            h2 {
+                                font-size: 1.3rem;
+                                font-weight: 500;
+                                line-height: 2rem;
+                                letter-spacing: 1.5px;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -703,7 +738,9 @@ p {
                     font-size: 5rem;
                 }
                 .cta {
-                    @include cta(2.5rem, 15px, 45px);
+                    @include cta(2.5rem,
+                    15px,
+                    45px);
                 }
             }
         }
@@ -730,28 +767,25 @@ p {
                     }
                 }
                 .all-projects {
-                    // background-color: yellow;
                     .project-item:nth-child(even) {
-                        flex-direction: row-reverse;
+                        a {
+                            flex-direction: row-reverse;
+                        }
                     }
                     .project-item {
-                        // flex-direction: row;
                         margin: 50px 0;
-                        // height: 500px;
                         width: 100%;
                         a {
                             display: flex;
                             flex-direction: row;
                             .project-info {
-                                // flex-basis: 45%;
+                                flex-basis: 45%;
                                 height: 300px;
-                                // min-height: 300px;
                                 border-radius: 10px;
                             }
                             .project-img {
-                                // flex-basis: 55%;
+                                flex-basis: 55%;
                                 height: 300px;
-                                // min-height: 300px;
                                 border-radius: 10px;
                             }
                         }
@@ -788,6 +822,7 @@ p {
         #contact {
             .contact {
                 @include container;
+                width: 80%;
                 flex-direction: column;
                 padding: 100px 0;
                 align-items: center;
@@ -797,30 +832,21 @@ p {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-evenly;
+                    justify-content: space-around;
                     margin: 0;
-                    margin-top: 30px;
-                    a {
+                    margin-top: 40px;
+                    .contact-item {
                         width: 30%;
                         margin: 0;
-                        flex-direction: row;
-                    }
-                    .contact-item {
-                        width: 100%;
-                        margin: 0;
-                        flex-direction: row;
-                        .icon {
-                            height: 100px;
-                            width: 100px;
-                            img {
-                                object-fit: contain;
-                                min-width: 60px;
-                            }
-                        }
-                        .contact-info {
+                        flex-direction: column;
+                        a {
                             width: 100%;
-                            text-align: left;
-                            padding-left: 20px;
+                            margin: 0;
+                            flex-direction: row;
+                            .contact-info {
+                                width: 100%;
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -874,6 +900,22 @@ p {
                     .service-item {
                         flex-basis: 22%;
                         margin: 1.5%;
+                    }
+                }
+            }
+        }
+        #projects {
+            .projects {
+                .all-projects {
+                    .project-item {
+                        a {
+                            .project-info {
+                                height: 400px;
+                            }
+                            .project-img {
+                                height: 400px;
+                            }
+                        }
                     }
                 }
             }

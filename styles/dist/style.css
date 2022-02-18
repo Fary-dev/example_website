@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +11,15 @@ html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mitr", sans-serif;
 }
 
 a {
@@ -61,7 +73,7 @@ p {
   padding: 0 10px;
 }
 #header .header .nav-bar .brand h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.1rem;
@@ -230,6 +242,7 @@ p {
   background-color: #ee3933;
 }
 .main #hero .hero h1 {
+  font-family: "Montserrat", sans-serif;
   display: block;
   width: fit-content;
   font-size: 4rem;
@@ -347,7 +360,7 @@ p {
   margin-bottom: 10px;
 }
 .main #service .service .service-bottom .icon .serviceIcon {
-  color: #fff;
+  color: #ee3933;
   font-size: 50px;
 }
 .main #service .service .service-item {
@@ -384,6 +397,9 @@ p {
   box-shadow: 0 0 5px #ee3933;
   position: relative;
   background-image: linear-gradient(60deg, #ee3933 50%, #ee3933 100%);
+}
+.main #service .service .service-item:hover .icon .serviceIcon {
+  color: #fff;
 }
 .main #service .service .service-item h2 {
   font-size: 2rem;
@@ -623,36 +639,49 @@ p {
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  padding: 30px;
+  padding: 0;
   margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 0px 18px #dbd9d92c;
+  box-shadow: 0px 0px 0px #dbd9d92c;
   transition: 0.3s ease box-shadow;
+  background-image: linear-gradient(60deg, #2b2929 50%, #2b2929 100%);
   color: #fff;
+  transition: 0.6s ease-in-out background-image;
 }
 .main #contact .contact .contact-items .contact-item:hover {
-  box-shadow: 0px 0px 5px #ee3933;
-  background-image: linear-gradient(60deg, rgba(238, 57, 51, 0.1) 50%, rgba(238, 57, 51, 0.1) 100%);
+  box-shadow: 0px 0px 0px #ee3933;
+  background-image: linear-gradient(60deg, #ee3933 50%, #ee3933 100%);
 }
-.main #contact .contact .contact-items .contact-item .icon {
-  color: #fff;
-  font-size: 50px;
-  width: 70px;
-  margin: 0 auto;
-  margin-bottom: 10px;
+.main #contact .contact .contact-items .contact-item:hover .icon svg {
+  fill: #fff;
 }
-.main #contact .contact .contact-items .contact-item .contact-info h1 {
+.main #contact .contact .contact-items .contact-item a {
+  height: 100%;
+  width: 100%;
+  padding: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.main #contact .contact .contact-items .contact-item a svg {
+  width: 35px;
+  height: 35px;
+  fill: #ee3933;
+}
+.main #contact .contact .contact-items .contact-item a .contact-info h1 {
   font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
 }
-.main #contact .contact .contact-items .contact-item .contact-info h2 {
+.main #contact .contact .contact-items .contact-item a .contact-info h2 {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2rem;
+  letter-spacing: 1.5px;
+  color: #fff;
 }
 @keyframes hamburger_plus {
   0% {
@@ -730,7 +759,7 @@ p {
   .main #projects .projects .projects-header h1 {
     font-size: 4rem;
   }
-  .main #projects .projects .all-projects .project-item:nth-child(even) {
+  .main #projects .projects .all-projects .project-item:nth-child(even) a {
     flex-direction: row-reverse;
   }
   .main #projects .projects .all-projects .project-item {
@@ -742,10 +771,12 @@ p {
     flex-direction: row;
   }
   .main #projects .projects .all-projects .project-item a .project-info {
+    flex-basis: 45%;
     height: 300px;
     border-radius: 10px;
   }
   .main #projects .projects .all-projects .project-item a .project-img {
+    flex-basis: 55%;
     height: 300px;
     border-radius: 10px;
   }
@@ -777,6 +808,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 80%;
     flex-direction: column;
     padding: 100px 0;
     align-items: center;
@@ -787,32 +819,23 @@ p {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 0;
-    margin-top: 30px;
-  }
-  .main #contact .contact .contact-items a {
-    width: 30%;
-    margin: 0;
-    flex-direction: row;
+    margin-top: 40px;
   }
   .main #contact .contact .contact-items .contact-item {
+    width: 30%;
+    margin: 0;
+    flex-direction: column;
+  }
+  .main #contact .contact .contact-items .contact-item a {
     width: 100%;
     margin: 0;
     flex-direction: row;
   }
-  .main #contact .contact .contact-items .contact-item .icon {
-    height: 100px;
-    width: 100px;
-  }
-  .main #contact .contact .contact-items .contact-item .icon img {
-    object-fit: contain;
-    min-width: 60px;
-  }
-  .main #contact .contact .contact-items .contact-item .contact-info {
+  .main #contact .contact .contact-items .contact-item a .contact-info {
     width: 100%;
-    text-align: left;
-    padding-left: 20px;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -852,6 +875,12 @@ p {
     flex-basis: 22%;
     margin: 1.5%;
   }
+  .main #projects .projects .all-projects .project-item a .project-info {
+    height: 400px;
+  }
+  .main #projects .projects .all-projects .project-item a .project-img {
+    height: 400px;
+  }
 }
 #footer {
   background-image: linear-gradient(60deg, #000 0%, #000 100%);
@@ -868,7 +897,7 @@ p {
   padding-bottom: 10px;
 }
 #footer .footer h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 0.1rem;
