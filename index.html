@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+
+    <!-- <base href="~/" /> -->
     <title>My Website</title>
     <meta name="description" content="my page and I am developer">
     <meta charset="UTF-8">
@@ -19,11 +21,11 @@
     contribute to open source projects.">
     <meta name="twitter:image" content="https://twitter.com/Faramarz_1986/photo">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/dist/style.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
 
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+    <script src="https://use.fontawesome.com/releases/v6.0.0/js/all.js" data-auto-a11y="true"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js">
     </script>
@@ -35,13 +37,12 @@
 <body>
     <!-- -- Header -- -->
 
-
     <section id="header">
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero">
-                        <h1 itemprop="name" name="Faramarz Bakhsheshi"><span>F</span>aramarz <span>B</span>akhsheshi</h1>
+                    <a href="#about">
+                        <h1 itemprop="name" name="Faramarz Bakhsheshi">F<span>.</span>B<span></span></h1>
                     </a>
                 </div>
                 <div class="nav-list">
@@ -73,8 +74,11 @@
                     <h1>Hello,<span></span></h1>
                     <h1>my name is<span></span></h1>
                     <h1>Faramarz<span></span></h1>
-                    <a href="#projects" type="button" class="cta">Portfolio</a>
+                    <a href="#about" type="button" class="cta">About me</a>
                 </div>
+                <button class="fix-button" id="fixButton" onclick="topFunction()">
+                    <i class="fa-solid fa-arrow-up sss"></i>
+                </button>
             </div>
         </section>
 
@@ -126,32 +130,32 @@
                     </h1>
                 </div>
                 <div class="all-projects">
-                    <a href="https://github.com/Fary-dev/Food_Delivery" target="_blank">
-                        <div class="project-item">
+                    <div class="project-item">
+                        <a href="https://github.com/Fary-dev/Food_Delivery" target="_blank">
                             <div class="project-info">
                                 <h1>Delivery Food</h1>
                                 <h2>Mobile Application</h2>
                                 <p>This Project I writed with Dart programming language and flutter framework with to much Functionality!</p>
                             </div>
                             <div class="project-img">
-                                <img src="./images/project-img-1.png">
+                                <img src="../images/project-img-1.png">
                             </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/Fary-dev/Resturant_Web" target="_blank">
-                        <div class="project-item">
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/Fary-dev/Resturant_Web" target="_blank">
                             <div class="project-info">
                                 <h1>Restaurant Website</h1>
                                 <h2>Website</h2>
                                 <p>This Project I writed with Dart programming language and flutter framework, fully Responsive websites!</p>
                             </div>
                             <div class="project-img">
-                                <img src="./images/project-img-2.png">
+                                <img src="../images/project-img-2.png">
                             </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/Fary-dev/cryptocurrency" target="_blank">
-                        <div class="project-item">
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/Fary-dev/cryptocurrency" target="_blank">
                             <div class="project-info">
                                 <h1>Cryptocurrency</h1>
                                 <h2>Mobile Application</h2>
@@ -159,22 +163,22 @@
                                 </p>
                             </div>
                             <div class="project-img">
-                                <img src="./images/project-img-3.png">
+                                <img src="../images/project-img-3.png">
                             </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/Fary-dev/Website-with-HTML-CSS" target="_blank">
-                        <div class="project-item">
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://github.com/Fary-dev/Website-with-HTML-CSS" target="_blank">
                             <div class="project-info">
                                 <h1>Developer Website</h1>
                                 <h2>Website</h2>
                                 <p>this Project I writed with HTML5, CSS3 and Java Script, this Website is Fully Responsive and nice Design!</p>
                             </div>
                             <div class="project-img">
-                                <img src="./images/project-img-4.png">
+                                <img src="../images/project-img-4.png">
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,18 +189,18 @@
             <div class="about container">
                 <div class="col-left">
                     <div class="about-img">
-                        <a itemprop="outher" name="Faramarz Bakhsheshi" href="./images/my-foto.jpg" target="_blank">
-                            <img itemprop="outher" name="Faramarz Bakhsheshi" src="./images/my-foto.jpg" alt="I am Faramarz Bakhsheshi and this is my photo">
+                        <a itemprop="outher" name="Faramarz Bakhsheshi" href="../images/my-foto.jpg" target="_blank">
+                            <img itemprop="outher" name="Faramarz Bakhsheshi" src="../images/my-foto.jpg" alt="I am Faramarz Bakhsheshi and this is my image" width="500px">
                         </a>
                     </div>
                 </div>
                 <div class="col-right">
                     <h1 name="About me" class="section-title">About <span>Me</span></h1>
-                    <h2>Front End Developer</h2>
+                    <h2>Frontend Developer</h2>
                     <p>My name is Faramarz Bakhsheshi I'm a Front End Developer, Bachelor of Software Engineering in Iran. I describe myself as a passionate developer who loves coding, open source, the web and mobile platform.Aside from my job, I like to
                         create and contribute to open source projects. That helps me to learn a ton of new stuff, grow as a developer and support other open source projects. In my free time you can find me longboarding , at the gym, at the beach or on
                         tech meetups and conferences around Europe.</p>
-                    <a name="resume" href="./file/Lebenslauf.pdf" download class="cta">Download Resume</a>
+                    <a name="resume" href="../file/Lebenslauf.pdf" download class="cta">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -253,16 +257,16 @@
             <h2></h2>
             <div class="social-icon">
                 <div class="social-item">
-                    <a href="https://www.linkedin.com/in/faramarz-b-82108a85" target="_blank "><i class="fa-brands fa-linkedin-in social"></i></a>
+                    <a href="https://www.linkedin.com/in/faramarz-b-82108a85" target="_blank "><i class="fa-brands fa-linkedin-in social-icon"></i></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://www.facebook.com/faramarz.bakhsheshi" target="_blank "><i class="fa-brands fa-facebook-f social"></i></a>
+                    <a href="https://www.facebook.com/faramarz.bakhsheshi" target="_blank "><i class="fa-brands fa-facebook-f social-icon"></i></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://github.com/Fary-dev" target="_blank "><i class="fa-brands fa-github social"></i></a>
+                    <a href="https://github.com/Fary-dev" target="_blank "><i class="fa-brands fa-github social-icon"></i></a>
                 </div>
                 <div class="social-item">
-                    <a href="https://twitter.com/Faramarz_1986" target="_blank "><i class="fa-brands fa-twitter social"></i></a>
+                    <a href="https://twitter.com/Faramarz_1986" target="_blank "><i class="fa-brands fa-twitter social-icon"></i></a>
                 </div>
             </div>
             <p>Copyright © 2022 Faramarz. All rights reserved</p>
@@ -270,7 +274,7 @@
     </section>
 
 
-    <script src="./app.js "></script>
+    <script src="./../app.js"></script>
 
 </body>
 
