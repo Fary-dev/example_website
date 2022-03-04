@@ -25,11 +25,6 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" data-auto-a11y="true"></script> -->
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js">
     </script>
 
@@ -79,6 +74,48 @@
                     <h1>Faramarz<span></span></h1>
                     <a href="#about" type="button" class="cta">About me</a>
                 </div>
+                <!-- ____________ CatBot ___________ -->
+                <!-- <div class="chat-icon">
+                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                </div>  -->
+
+                <div class="content">
+                    <!-- _________ Header Chatbot ___________ -->
+                    <div class="header-chat">
+                        <div class="header-tittle">
+                            <h5>Chat width me</h5>
+                            <i class="fas fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <div class="close-btn">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+
+                    <div class="full-chat-block">
+                        <!-- ______ Massage Container ________ -->
+
+                        <div class="chat-container">
+                            <!-- ________ Massage __________ -->
+                            <div id="chatbox">
+                                <h5 id="chat-timestamp"></h5>
+                                <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                            </div>
+
+                            <!-- _____ User input box ______ -->
+                            <div class="chat-bar-input-block">
+                                <div class="userInput">
+                                    <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a massage">
+                                    <!-- <p></p> -->
+                                </div>
+                                <dic class="chat-bar-icon">
+                                    <i class="fas fa-paper-plane"></i>
+                                </dic>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ________________________________ -->
                 <button class="fix-button" id="fixButton" onclick="topFunction()">
                     <i class="fa-solid fa-arrow-up sss"></i>
                 </button>

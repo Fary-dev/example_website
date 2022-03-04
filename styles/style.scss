@@ -333,6 +333,112 @@ $p2:30px) {
                     animation-delay: .3s;
                 }
             }
+            // ---- ChatBot ------
+            .chat-icon {
+                position: fixed;
+                right: 50px;
+                bottom: 130px;
+                cursor: pointer;
+                z-index: 1000;
+                display: none;
+                .fas {
+                    margin: 5px;
+                    font-size: 50px;
+                    color: #fff;
+                    text-shadow: 3px 3px 3px $primaryColor;
+                }
+            }
+            .content {
+                position: fixed;
+                right: 80px;
+                bottom: 190px;
+                width: 400px;
+                height: 50vh;
+                background: #a7a4a4;
+                z-index: 1000;
+                transition: all .3s ease-out;
+                transform: scaleY(0);
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                &.active {
+                    transform: scaleY(1);
+                }
+                .header-chat {
+                    flex-basis: 10%;
+                    padding: 10px 15px;
+                    margin: 2px 2px 0px 2px;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    justify-content: space-between;
+                    display: flex;
+                    background-color: $bkColor;
+                    color: #fff;
+                    .header-tittle {
+                        display: flex;
+                        h5 {
+                            font-size: 1.7rem;
+                            margin-right: 20px;
+                        }
+                        .fas {
+                            font-size: 25px;
+                        }
+                    }
+                    .close-btn {
+                        margin: auto 10px;
+                        cursor: pointer;
+                        .fas {
+                            font-size: 2.5rem;
+                            color: $primaryColor;
+                        }
+                    }
+                }
+                .full-chat-block {
+                    overflow: hidden;
+                    flex-basis: 90%;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #5f5d5d;
+                    margin: 2px;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    .chat-container {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        .chatbox {
+                            height: 100px;
+                        }
+                        .chat-bar-input-block {
+                            display: flex;
+                            background-color: $bkColor;
+                            justify-content: center;
+                            justify-items: center;
+                            box-sizing: border-box;
+                            font-size: 20px;
+                            padding: 10px 15px;
+                            .userInput {
+                                input {
+                                    border-radius: 10px;
+                                    width: 300px;
+                                    height: 40px;
+                                    &::placeholder {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                            .chat-bar-icon {
+                                color: #fff;
+                                font-size: 25px;
+                                cursor: pointer;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            // ----------------------------------------------
             .fix-button {
                 display: none;
                 position: fixed;
@@ -372,6 +478,7 @@ $p2:30px) {
             max-width: 1200px;
             margin: 0 auto;
             padding: 100px 0;
+            width: 80%;
             .service-top {
                 max-width: 500px;
                 margin: 0 auto;
@@ -405,7 +512,7 @@ $p2:30px) {
             }
             .service-item {
                 flex-basis: 80%;
-                min-height: 300px;
+                min-height: 200px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -567,26 +674,27 @@ $p2:30px) {
             border-radius: 10px;
             width: 80%;
             .col-left {
-                width: 250px;
-                height: 360px;
-                max-width: 360px;
-                min-width: 300px;
+                width: 150px;
+                height: 260px;
+                max-height: 260px;
+                max-width: 260px;
+                min-width: 200px;
                 .about-img {
                     height: 100%;
                     width: 100%;
                     position: relative;
                     border: 0px solid #455724;
                     z-index: 1;
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        left: -43px;
-                        top: 43px;
-                        height: 95%;
-                        width: 95%;
-                        border: 7px solid #455724;
-                        z-index: -1;
-                    }
+                    // &::after {
+                    //     content: '';
+                    //     position: absolute;
+                    //     left: -43px;
+                    //     top: 43px;
+                    //     height: 95%;
+                    //     width: 95%;
+                    //     border: 7px solid #455724;
+                    //     z-index: -1;
+                    // }
                 }
             }
             .col-right {
@@ -754,6 +862,7 @@ $p2:30px) {
             }
             .service-bottom {
                 .service-item {
+                    min-height: 300px;
                     flex-basis: 45%;
                     margin: 2.5%;
                 }
@@ -855,6 +964,20 @@ $p2:30px) {
     }
 }
 
+@media only screen and (min-width:1000px) {
+    .main {
+        #service {
+            .service {
+                .service-bottom {
+                    .service-item {
+                        min-height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width:1200px) {
     #header {
         .header {
@@ -900,6 +1023,7 @@ $p2:30px) {
                     .service-item {
                         flex-basis: 22%;
                         margin: 1.5%;
+                        min-height: 300px;
                     }
                 }
             }

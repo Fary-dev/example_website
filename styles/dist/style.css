@@ -280,6 +280,108 @@ p {
   animation: text_reveal_box 1s ease;
   animation-delay: 0.3s;
 }
+.main #hero .hero .chat-icon {
+  position: fixed;
+  right: 50px;
+  bottom: 130px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+}
+.main #hero .hero .chat-icon .fas {
+  margin: 5px;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 3px 3px 3px #ee3933;
+}
+.main #hero .hero .content {
+  position: fixed;
+  right: 80px;
+  bottom: 190px;
+  width: 400px;
+  height: 50vh;
+  background: #a7a4a4;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+  transform: scaleY(0);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.main #hero .hero .content.active {
+  transform: scaleY(1);
+}
+.main #hero .hero .content .header-chat {
+  flex-basis: 10%;
+  padding: 10px 15px;
+  margin: 2px 2px 0px 2px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  justify-content: space-between;
+  display: flex;
+  background-color: #141212;
+  color: #fff;
+}
+.main #hero .hero .content .header-chat .header-tittle {
+  display: flex;
+}
+.main #hero .hero .content .header-chat .header-tittle h5 {
+  font-size: 1.7rem;
+  margin-right: 20px;
+}
+.main #hero .hero .content .header-chat .header-tittle .fas {
+  font-size: 25px;
+}
+.main #hero .hero .content .header-chat .close-btn {
+  margin: auto 10px;
+  cursor: pointer;
+}
+.main #hero .hero .content .header-chat .close-btn .fas {
+  font-size: 2.5rem;
+  color: #ee3933;
+}
+.main #hero .hero .content .full-chat-block {
+  overflow: hidden;
+  flex-basis: 90%;
+  margin: 0;
+  padding: 0;
+  background-color: #5f5d5d;
+  margin: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.main #hero .hero .content .full-chat-block .chat-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.main #hero .hero .content .full-chat-block .chat-container .chatbox {
+  height: 100px;
+}
+.main #hero .hero .content .full-chat-block .chat-container .chat-bar-input-block {
+  display: flex;
+  background-color: #141212;
+  justify-content: center;
+  justify-items: center;
+  box-sizing: border-box;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+.main #hero .hero .content .full-chat-block .chat-container .chat-bar-input-block .userInput input {
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+}
+.main #hero .hero .content .full-chat-block .chat-container .chat-bar-input-block .userInput input::placeholder {
+  padding-left: 10px;
+}
+.main #hero .hero .content .full-chat-block .chat-container .chat-bar-input-block .chat-bar-icon {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  margin: auto;
+}
 .main #hero .hero .fix-button {
   display: none;
   position: fixed;
@@ -322,6 +424,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  width: 80%;
 }
 .main #service .service .service-top {
   max-width: 500px;
@@ -365,7 +468,7 @@ p {
 }
 .main #service .service .service-item {
   flex-basis: 80%;
-  min-height: 300px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -532,10 +635,11 @@ p {
   width: 80%;
 }
 .main #about .about .col-left {
-  width: 250px;
-  height: 360px;
-  max-width: 360px;
-  min-width: 300px;
+  width: 150px;
+  height: 260px;
+  max-height: 260px;
+  max-width: 260px;
+  min-width: 200px;
 }
 .main #about .about .col-left .about-img {
   height: 100%;
@@ -543,16 +647,6 @@ p {
   position: relative;
   border: 0px solid #455724;
   z-index: 1;
-}
-.main #about .about .col-left .about-img::after {
-  content: "";
-  position: absolute;
-  left: -43px;
-  top: 43px;
-  height: 95%;
-  width: 95%;
-  border: 7px solid #455724;
-  z-index: -1;
 }
 .main #about .about .col-right {
   width: 100%;
@@ -753,6 +847,7 @@ p {
     font-size: 4rem;
   }
   .main #service .service-bottom .service-item {
+    min-height: 300px;
     flex-basis: 45%;
     margin: 2.5%;
   }
@@ -838,6 +933,11 @@ p {
     text-align: center;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .main #service .service .service-bottom .service-item {
+    min-height: 200px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   #header .header .nav-bar .brand h1 {
     font-size: 3.5rem;
@@ -874,6 +974,7 @@ p {
   .main #service .service .service-bottom .service-item {
     flex-basis: 22%;
     margin: 1.5%;
+    min-height: 300px;
   }
   .main #projects .projects .all-projects .project-item a .project-info {
     height: 400px;
