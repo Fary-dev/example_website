@@ -1054,26 +1054,23 @@ $p2:30px) {
         @include brand;
         min-height: 200px;
         flex-direction: column;
-        padding: 50px;
+        padding: 10px;
         padding-bottom: 10px;
         h2 {
             color: #fff;
             font-weight: 500;
             font-size: 1.8rem;
             letter-spacing: .1rem;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
         .social-icon {
             display: flex;
             flex-direction: row;
-            margin-bottom: 30px;
+            margin: 10px 0;
             color: #fff;
             .social-item {
                 @include social-icon;
-                height: 50px;
-                width: 50px;
-                margin: 0 5px;
+                margin: 0 15px;
             }
         }
         p {
