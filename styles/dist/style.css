@@ -194,7 +194,7 @@ p {
   /* -- Keyframes -- */
 }
 .main #hero {
-  background: url(../../images/background.jpg) repeat fixed 50%;
+  background: url(../../images/bgFoto.jpg) repeat fixed 50%;
   background-size: cover;
   background-position: top center;
   position: relative;

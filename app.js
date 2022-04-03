@@ -50,10 +50,10 @@ function topFunction() {
 
 //   ---------------  Chat Bot ---------------------------
 
-const chatIcon = document.querySelector('#hero .hero .chat-icon');
-const chatBox = document.querySelector('#hero .hero .content');
-const closeBtn = document.querySelector('#hero .hero .content .header-chat .close-btn');
-const icon = document.querySelector('#hero .hero .chat-icon .fas');
+// const chatIcon = document.querySelector('#hero .hero .chat-icon');
+// const chatBox = document.querySelector('#hero .hero .content');
+// const closeBtn = document.querySelector('#hero .hero .content .header-chat .close-btn');
+// const icon = document.querySelector('#hero .hero .chat-icon .fas');
 
 
 // ------ Show content Chat Box ------

@@ -48,11 +48,11 @@ function topFunction() {
 }
 
 ; //   ---------------  Chat Bot ---------------------------
-
-var chatIcon = document.querySelector('#hero .hero .chat-icon');
-var chatBox = document.querySelector('#hero .hero .content');
-var closeBtn = document.querySelector('#hero .hero .content .header-chat .close-btn');
-var icon = document.querySelector('#hero .hero .chat-icon .fas'); // ------ Show content Chat Box ------
+// const chatIcon = document.querySelector('#hero .hero .chat-icon');
+// const chatBox = document.querySelector('#hero .hero .content');
+// const closeBtn = document.querySelector('#hero .hero .content .header-chat .close-btn');
+// const icon = document.querySelector('#hero .hero .chat-icon .fas');
+// ------ Show content Chat Box ------
 // chatIcon.addEventListener('click', () => {
 //     chatBox.classList.toggle('active');
 //     if (icon.style.color != "#fff")
